@@ -9,9 +9,7 @@ namespace AnimateAlert
     public enum Animation
     {
         None,
-        [Description("fade-out")]
-        FadeOut,
-        [Description("fade-in")]
-        FadeIn,
+        [Description("fade-in-out")]
+        FadeInOut,
     }
 }

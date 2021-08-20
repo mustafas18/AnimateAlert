@@ -1,0 +1,25 @@
+﻿body {
+}
+.fade-in-out-end {
+    animation: fadeOut 1s;
+    -webkit-animation: fadeOut 1s;
+    animation-fill-mode:forwards;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+   to {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

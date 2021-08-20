@@ -2,16 +2,34 @@
 @using AnimateAlert.Components
 @page "/"
 <h3>Sample</h3>
-<Alert @ref="alert">Hello World!</Alert>
+@for (int i = 0; i <= currentCount; i++)
+{
+    <Alert @ref="alert">Hello World!</Alert>
+}
+<Alert @ref="alert2">Hello World!</Alert>
+
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-warning" @onclick="IncrementCount2">Click me</button>
 
 @code {
     private int currentCount = 0;
     Alert alert;
+    Alert alert2;
     private void IncrementCount()
     {
+        currentCount++;
         alert.Color = AnimateAlert.Color.Info;
         alert.IsDismissible = true;
+        alert.Animation = Animation.FadeInOut;
         alert.IsOpen = true;
+        alert.AutoHideDelay = 2000;
+    }
+    private void IncrementCount2()
+    {
+        alert2.Color = AnimateAlert.Color.Warning;
+        alert2.IsDismissible = true;
+        alert2.Animation = Animation.FadeInOut;
+        alert2.IsOpen = true;
+        alert2.AutoHideDelay = 2000;
     }
 }
