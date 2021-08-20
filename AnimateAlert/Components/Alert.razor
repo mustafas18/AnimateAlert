@@ -1,0 +1,13 @@
+﻿@if (IsOpen)
+{
+<div class="@ClassName">
+    @ChildContent
+    @if (IsDismissible)
+    {
+        <button @onclick="OnClose" type="button" class="close" aria-label="Close">
+            <span>&times;</span>
+        </button>
+    }
+</div>
+}
+   
