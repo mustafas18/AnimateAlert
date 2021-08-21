@@ -27,12 +27,11 @@ AnimateAlert is a component for Blazor apps.
 | ------------- | ------------- | ------------- |
 | Animation  | Animation  | Animates the alert. |
 | AutoHide  | bool  | Auto hides the alert after the specified delay in milliseconds  (Default is 4000ms). |
-| AutoHideDelay  | int  | Sets the delay in milliseconds for auto hiding the alert (Default is 4000). |
+| AutoHideDelay  | int  | Sets the delay in milliseconds for auto hiding the alert. |
 | ChildContent  | RenderFragment  | Sets alert content. |
 | Color  | Color  | Applies the selected color to the alert. |
 | IsDismissible  | bool  | Adds the close button to the alert. |
 | IsOpen  | bool  | Opens the alert. |
 
 ## Contributing
-
-If you want to contribute to the project and make it better, your help is very welcome.
+All contributers are welcomed.
