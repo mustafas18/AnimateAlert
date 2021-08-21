@@ -5,6 +5,8 @@ AnimateAlert is a component for Blazor apps.
 ## Example
 
 ```
+@using AnimateAlert.Components
+
 <Alert @ref="alert">Hello World!</Alert>
 
 @code {
@@ -18,7 +20,7 @@ AnimateAlert is a component for Blazor apps.
 
 | Property  | Type | Description |
 | ------------- | ------------- | ------------- |
-| Animation  | Animation  | Animate the alert. |
+| Animation  | Animation  | Animates the alert. |
 | AutoHide  | bool  | Auto hides the alert after the specified delay in milliseconds  (Default is 4000ms). |
 | AutoHideDelay  | int  | Sets the delay in milliseconds for auto hiding the alert (Default is 4000). |
 | ChildContent  | RenderFragment  | Sets alert content. |
