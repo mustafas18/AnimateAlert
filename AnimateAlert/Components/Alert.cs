@@ -12,6 +12,9 @@ namespace AnimateAlert.Components
     public partial class Alert : ComponentBase
     {
         private bool _isOpen = false;
+        /// <summary>
+        /// Opens the alert
+        /// </summary>
         [Parameter]
         public bool IsOpen {
             get => _isOpen;
@@ -25,14 +28,35 @@ namespace AnimateAlert.Components
                     CheckAutoHide().ConfigureAwait(false);
     }
 }
+        /// <summary>
+        /// Adds the close button to the alert.
+        /// </summary>
         [Parameter] public bool IsDismissible { get; set; } = false;
+
+        /// <summary>
+        /// Applies the selected color to the alert.
+        /// </summary>
         [Parameter] public Color Color { get; set; }
 
+        /// <summary>
+        /// Sets alert content.
+        /// </summary>
         [Parameter] public RenderFragment ChildContent { get; set; }
 
+        /// <summary>
+        /// Animation type of the alert.
+        /// </summary>
         [Parameter] public Animation Animation { get; set; } = Animation.None;
         [Parameter] public EventCallback<bool> IsOpenChanged { get; set; }
+
+        /// <summary>
+        /// Auto hides the alert after the specified delay in milliseconds (Default is 4000ms).
+        /// </summary>
         [Parameter] public bool AutoHide { get; set; } = true;
+
+        /// <summary>
+        /// Sets the delay in milliseconds for auto hiding the alert.
+        /// </summary>
         [Parameter] public int AutoHideDelay { get; set; } = 4000;
         [Parameter] public bool AnimationIsPlay { get; set; } = false;
         [Parameter] public static string cssClass { get; set; }
@@ -115,6 +139,7 @@ namespace AnimateAlert.Components
                 await Task.Delay(AutoHideDelay).ConfigureAwait(true);
                 await InvokeAsync(StateHasChanged).ConfigureAwait(false);
                 PlayAnimation();
+                
             }
         }
     }
