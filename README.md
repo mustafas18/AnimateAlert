@@ -16,7 +16,7 @@ AnimateAlert is a component for Blazor apps.
   private void ShowAlert()
   {
    alert.Color = AnimateAlert.Color.Info;
-   alert.Animation = Animation.FadeInOut;
+   alert.Animation = AnimateAlert.Animation.FadeInOut;
    alert.IsOpen = true;
   }
 }
