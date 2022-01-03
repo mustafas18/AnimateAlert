@@ -28,6 +28,8 @@ namespace AnimateAlert
         [Description("dark")]
         Dark,
         [Description("link")]
-        Link
+        Link,
+       [Description("default")]
+        Default
     }
 }
